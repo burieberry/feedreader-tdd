@@ -9,10 +9,9 @@
  * to ensure they don't run until the DOM is ready.
  */
 $(function() {
-    /* This is our first test suite - a test suite just contains
-    * a related set of tests. This suite is all about the RSS
-    * feeds definitions, the allFeeds variable in our application.
-    */
+    /* RSS feeds test suite for RSS feeds definitions,
+     * the allFeeds variable in our application.
+     */
     describe('RSS Feeds', function() {
         /* Tests to make sure that the allFeeds variable
          * has been defined and that it is not empty.
@@ -21,7 +20,6 @@ $(function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
-
 
         /* Test loops through each feed in the allFeeds object and
          * ensures it has a URL defined and that the URL is not empty.
@@ -32,7 +30,6 @@ $(function() {
                 expect(feed.url.length).not.toBe(0);
             });
          });
-
 
         /* Test loops through each feed in the allFeeds object and
          * ensures it has a name defined and that the name is not empty.
@@ -46,19 +43,20 @@ $(function() {
     });
 
 
-    /* TODO: Write a new test suite named "The menu" */
+    /* "The menu" test suite */
+    describe('The menu', function() {
 
-        /* TODO: Write a test that ensures the menu element is
-         * hidden by default. You'll have to analyze the HTML and
-         * the CSS to determine how we're performing the
-         * hiding/showing of the menu element.
-         */
+        /* Test ensures the menu element is hidden by default. */
+         it('should be hidden', function() {
+            expect($('body').hasClass('menu-hidden')).toBe(true);
+         });
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+    });
 
     /* TODO: Write a new test suite named "Initial Entries" */
 
