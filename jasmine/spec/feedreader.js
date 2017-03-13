@@ -1,7 +1,7 @@
 /* feedreader.js
  *
  * This is the spec file that Jasmine will read and contains
- * all of the tests that will be run against your application.
+ * all of the tests that will be run against the application.
  */
 
 /* We're placing all of our tests within the $() function,
@@ -14,12 +14,8 @@ $(function() {
     * feeds definitions, the allFeeds variable in our application.
     */
     describe('RSS Feeds', function() {
-        /* This is our first test - it tests to make sure that the
-         * allFeeds variable has been defined and that it is not
-         * empty. Experiment with this before you get started on
-         * the rest of this project. What happens when you change
-         * allFeeds in app.js to be an empty array and refresh the
-         * page?
+        /* Tests to make sure that the allFeeds variable
+         * has been defined and that it is not empty.
          */
         it('are defined', function() {
             expect(allFeeds).toBeDefined();
