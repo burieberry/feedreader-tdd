@@ -60,10 +60,10 @@ $(function() {
             var menuIcon = $('.menu-icon-link');
 
             menuIcon.trigger('click');
-            expect($('body').hasClass('menu-hidden')).toBe(false);
+            expect($('body').hasClass('menu-hidden')).toBeFalsy();
 
             menuIcon.trigger('click');
-            expect($('body').hasClass('menu-hidden')).toBe(true);
+            expect($('body').hasClass('menu-hidden')).toBeTruthy();
          });
     });
 
