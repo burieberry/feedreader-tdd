@@ -70,8 +70,7 @@ $(function() {
 
     /* "Initial Entries" test suite */
     describe('Initial Entries', function() {
-
-        beforeEach(function(done) {
+        beforeAll(function(done) {
             loadFeed(0, done);
         });
 
@@ -84,11 +83,13 @@ $(function() {
         });
     });
 
+
     /* "New Feed Selection" test suite */
     describe('New Feed Selection', function() {
         var feed0,
             feed1,
-            feed2;
+            feed2,
+            feed3;
 
         beforeAll(function(done) {
             loadFeed(0, function() {
@@ -97,12 +98,14 @@ $(function() {
                     feed1 = $('.feed')[0].innerHTML;
                     loadFeed(2, function() {
                         feed2 = $('.feed')[0].innerHTML;
-                        done();
+                        loadFeed(3, function() {
+                            feed3 = $('.feed')[0].innerHTML;
+                            done();
+                        });
                     });
                 });
             });
         });
-
 
         /* Test ensures when a new feed is loaded by the loadFeed
          * function that the content actually changes.
@@ -110,10 +113,13 @@ $(function() {
         it('should change content when new feed loads', function(done) {
             expect(feed0).not.toEqual(feed1);
             expect(feed0).not.toEqual(feed2);
+            expect(feed0).not.toEqual(feed3);
             expect(feed1).not.toEqual(feed2);
+            expect(feed1).not.toEqual(feed3);
             expect(feed0).toEqual(feed0);
             expect(feed1).toEqual(feed1);
             expect(feed2).toEqual(feed2);
+            expect(feed3).toEqual(feed3);
             done();
         });
     });

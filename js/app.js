@@ -70,7 +70,7 @@ function init() {
                  });
 
                  if (cb) {
-                     cb();
+                    cb();
                  }
                },
        error: function (result, status, err){
