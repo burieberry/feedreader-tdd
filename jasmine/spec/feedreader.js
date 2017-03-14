@@ -89,21 +89,19 @@ $(function() {
         var feed1,
             feed2;
 
-        beforeEach(function(done) {
-            loadFeed(1, function() {
-                done();
+        beforeAll(function(done) {
+            loadFeed(0, function() {
+                feed1 = $('.header-title')[0].innerHTML;
+                console.log(feed1);
+                    loadFeed(1, function() {
+                        feed2 = $('.header-title')[0].innerHTML;
+                        console.log(feed1);
+                        console.log(feed2);
+                        done();
+                    });
+                });
             });
 
-            feed1 = $('.header-title')[0].innerHTML;
-        });
-
-        beforeEach(function(done) {
-            loadFeed(2, function() {
-                done();
-            });
-
-            feed2 = $('.header-title')[0].innerHTML;
-        });
 
         /* Test ensures when a new feed is loaded by the loadFeed
          * function that the content actually changes.
