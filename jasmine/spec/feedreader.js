@@ -86,29 +86,34 @@ $(function() {
 
     /* "New Feed Selection" test suite */
     describe('New Feed Selection', function() {
-        var feed1,
+        var feed0,
+            feed1,
             feed2;
 
         beforeAll(function(done) {
             loadFeed(0, function() {
-                feed1 = $('.header-title')[0].innerHTML;
-                console.log(feed1);
-                    loadFeed(1, function() {
-                        feed2 = $('.header-title')[0].innerHTML;
-                        console.log(feed1);
-                        console.log(feed2);
+                feed0 = $('.feed')[0].innerHTML;
+                loadFeed(1, function() {
+                    feed1 = $('.feed')[0].innerHTML;
+                    loadFeed(2, function() {
+                        feed2 = $('.feed')[0].innerHTML;
                         done();
                     });
                 });
             });
+        });
 
 
         /* Test ensures when a new feed is loaded by the loadFeed
          * function that the content actually changes.
          */
         it('should change content when new feed loads', function(done) {
+            expect(feed0).not.toEqual(feed1);
+            expect(feed0).not.toEqual(feed2);
             expect(feed1).not.toEqual(feed2);
-            console.log(feed1, feed2);
+            expect(feed0).toEqual(feed0);
+            expect(feed1).toEqual(feed1);
+            expect(feed2).toEqual(feed2);
             done();
         });
     });
