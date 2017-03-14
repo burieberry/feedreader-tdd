@@ -4,9 +4,9 @@ Created March 2017.
 
 ## Project Overview
 
-This project is a web-based application that reads RSS feeds. The original developer of this application has included [Jasmine](http://jasmine.github.io/), however the test suite is incomplete. This file includes the completed version of the test suite.
+This project is a web-based application that reads RSS feeds. The original developer of this application has included [Jasmine](http://jasmine.github.io/), however the test suite was incomplete. This file includes the completed version of the test suite.
 
-- [See original project assets here.](http://github.com/udacity/frontend-nanodegree-feedreader).
+- [See original project assets here.](http://github.com/udacity/frontend-nanodegree-feedreader)
 - [See project rubric here.](https://review.udacity.com/#!/projects/3442558598/rubric)
 
 ### What is "test-driven development"?
