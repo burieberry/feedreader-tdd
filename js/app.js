@@ -83,8 +83,6 @@ function init() {
      });
  }
 
- console.log($('.entry').parent().innerText);
-
 
 /* Google API: Loads the Feed Reader API and defines what function
  * to call when the Feed Reader API is done loading.
