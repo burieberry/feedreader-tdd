@@ -15,7 +15,7 @@ Testing is an important part of the development process and many organizations p
 
 ## How to Use
 
-- Download the repo and open `SpecRunner.html` on a browser.
+- Download the repo and open `index.html` on a browser.
 - Default screen displays 10 recent posts from Udacity Blog's RSS feed
 - Scroll to the bottom to see Jasmine tests and test results
 - Click on the menu icon to see other feeds included in this project
