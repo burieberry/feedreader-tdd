@@ -79,7 +79,7 @@ $(function() {
          * .entry element within the .feed container.
          */
         it('should contain at least one entry', function() {
-            expect($('.entry').parents().hasClass('feed')).toBe(true);
+            expect($('.feed .entry').length).toBeGreaterThan(0);
         });
     });
 
