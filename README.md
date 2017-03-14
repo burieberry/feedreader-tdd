@@ -1,4 +1,4 @@
-# TDD Project: RSS Feed Reader
+# Test-Driven Development: RSS Feed Reader
 
 Created March 2017.
 
