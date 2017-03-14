@@ -24,22 +24,22 @@ $(function() {
         /* Test loops through each feed in the allFeeds object and
          * ensures it has a URL defined and that the URL is not empty.
          */
-         it('should have a url', function() {
+        it('should have a url', function() {
             allFeeds.forEach(function(feed) {
                 expect(feed.url).toBeDefined();
                 expect(feed.url.length).not.toBe(0);
             });
-         });
+        });
 
         /* Test loops through each feed in the allFeeds object and
          * ensures it has a name defined and that the name is not empty.
          */
-         it('should have a name', function() {
+        it('should have a name', function() {
             allFeeds.forEach(function(feed) {
                 expect(feed.name).toBeDefined();
                 expect(feed.name.length).not.toBe(0);
             });
-         });
+        });
     });
 
 
@@ -47,16 +47,16 @@ $(function() {
     describe('The Menu', function() {
 
         /* Test ensures the menu element is hidden by default. */
-         it('should be hidden', function() {
+        it('should be hidden', function() {
             expect($('body').hasClass('menu-hidden')).toBe(true);
-         });
+        });
 
         /* Test ensures the menu changes visibility when the
          * menu icon is clicked.
          * This test has two expectations: does the menu display
          * when clicked and does it hide when clicked again.
          */
-         it('should change visibility when menu icon is clicked', function() {
+        it('should change visibility when menu icon is clicked', function() {
             var menuIcon = $('.menu-icon-link');
 
             menuIcon.trigger('click');
@@ -64,7 +64,7 @@ $(function() {
 
             menuIcon.trigger('click');
             expect($('body').hasClass('menu-hidden')).toBeTruthy();
-         });
+        });
     });
 
 
